@@ -11,6 +11,11 @@
 #include "ADC.h"
 
 // default constructor
+ADC_INPUT::ADC_INPUT()
+{
+
+	
+} //ADC
 ADC_INPUT::ADC_INPUT(ADC_Channel channel)
 {    
 	 this->channel=channel;
@@ -62,6 +67,11 @@ u16 ADC_INPUT::ADC_ChannelRead()
 	ADCSRA|= (1<<ADIF);
  			
 	return ADCW;  	                   /*return ADC Word_(digital value)*/
+}
+
+void ADC_INPUT::Set_Channel(ADC_Channel channel)
+{
+	this->channel = channel;
 }
 /**********************************************************************************************************************
  *  END OF FILE: ADC.c

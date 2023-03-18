@@ -36,10 +36,11 @@ class ADC_INPUT
 
 	//functions
 	public:
-	ADC_INPUT();
-	ADC_INPUT(ADC_Channel);
-    void ADC_Init(ADC_Channel);
-    u16 ADC_ChannelRead();
+		ADC_INPUT();
+		ADC_INPUT(ADC_Channel);
+		void Set_Channel(ADC_Channel);
+		void ADC_Init(ADC_Channel);
+		u16 ADC_ChannelRead();
 
 }; //ADC
 
